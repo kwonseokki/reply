@@ -7,4 +7,8 @@
     <select id="select">
         SELECT * FROM board;
     </select>
+
+    <insert id="insert" parameterType="std.reply.dto.BoardDTO" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO board (title, content) VALUES (#{title}, #{content})
+    </insert>
 </mapper>
