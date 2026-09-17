@@ -10,5 +10,11 @@ import java.util.List;
 public interface BoardMapper {
     public List<BoardDTO> select();
 
+    public BoardDTO selectById(int id);
+
     public void insert(BoardDTO board);
+
+    public void deleteById(int id);
+
+    public void update(BoardDTO board);
 }

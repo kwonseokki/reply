@@ -33,4 +33,21 @@ public class BoardMapperTests {
 
         boardMapper.insert(boardDTO);
     }
+
+    @Test
+    public void testDeleteBoard() {
+        int id = 1;
+
+        boardMapper.deleteById(id);
+    }
+
+    @Test
+    public void testUpdateBoard() {
+        BoardDTO boardDTO = boardMapper.selectById(2);
+
+        boardDTO.setContent("update content");
+        boardDTO.setTitle("update title");
+
+        boardMapper.update(boardDTO);
+    }
 }

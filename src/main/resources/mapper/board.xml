@@ -11,4 +11,16 @@
     <insert id="insert" parameterType="std.reply.dto.BoardDTO" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO board (title, content) VALUES (#{title}, #{content})
     </insert>
+
+    <delete id="deleteById" parameterType="int">
+        DELETE FROM board WHERE id = #{id}
+    </delete>
+
+    <update id="update" parameterType="std.reply.dto.BoardDTO">
+        UPDATE board SET title = #{title}, content = #{content} WHERE id = #{id}
+    </update>
+
+    <select id="selectById" resultType="std.reply.dto.BoardDTO" parameterType="int">
+        SELECT * FROM BOARD WHERE id = #{id}
+    </select>
 </mapper>
