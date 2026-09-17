@@ -23,4 +23,14 @@ public class BoardMapperTests {
             log.info(board.getTitle());
         });
     }
+
+    @Test
+    public void insertBoard() {
+        BoardDTO boardDTO = BoardDTO.builder()
+                .title("test title")
+                .content("test content")
+                .build();
+
+        boardMapper.insert(boardDTO);
+    }
 }
