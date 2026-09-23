@@ -22,4 +22,14 @@ public class BoardServiceImpl implements BoardService {
     public BoardDTO getBoard(int id) {
         return boardMapper.selectById(id);
     }
+
+    @Override
+    public void modify(BoardDTO board) {
+        boardMapper.update(board);
+    }
+
+    @Override
+    public void delete(int id) {
+        boardMapper.deleteById(id);
+    }
 }
