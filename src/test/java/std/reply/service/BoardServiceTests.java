@@ -23,4 +23,12 @@ public class BoardServiceTests {
             log.info("board: " + board.toString());
         });
     }
+
+    @Test
+    public void testGetBoard() {
+        int id = 2;
+        BoardDTO board = boardService.getBoard(id);
+
+        log.info(board.toString());
+    }
 }

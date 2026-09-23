@@ -8,4 +8,5 @@ public interface BoardService {
 
     public List<BoardDTO> getBoardList();
 
+    public BoardDTO getBoard(int id);
 }
