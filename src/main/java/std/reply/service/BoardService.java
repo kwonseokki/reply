@@ -8,10 +8,10 @@ public interface BoardService {
 
     public List<BoardDTO> getBoardList();
 
-    public BoardDTO getBoard(int id);
+    public BoardDTO getBoard(Long id);
 
     public void modify(BoardDTO board);
 
-    public void delete(int id);
+    public void delete(Long id);
 
 }

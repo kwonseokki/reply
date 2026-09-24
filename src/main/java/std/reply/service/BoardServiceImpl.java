@@ -19,7 +19,7 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public BoardDTO getBoard(int id) {
+    public BoardDTO getBoard(Long id) {
         return boardMapper.selectById(id);
     }
 
@@ -29,7 +29,7 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Long id) {
         boardMapper.deleteById(id);
     }
 }

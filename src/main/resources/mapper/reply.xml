@@ -12,4 +12,16 @@
 <select id="selectAll" resultMap="replyResult" parameterType="long">
     SELECT * FROM reply where board_id = #{id}
 </select>
+
+    <insert id="insert" parameterType="std.reply.dto.ReplyDTO">
+        insert into reply (content, board_id) values (#{content}, #{boardId})
+    </insert>
+
+    <update id="update" parameterType="std.reply.dto.ReplyDTO">
+        update reply set content = #{content} where id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="long">
+        delete from reply where id = #{id}
+    </delete>
 </mapper>

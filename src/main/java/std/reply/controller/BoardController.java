@@ -25,7 +25,7 @@ public class BoardController {
     }
 
     @RequestMapping("/{id}")
-    public BoardDTO getBoardDetail(@PathVariable("id") int id) {
+    public BoardDTO getBoardDetail(@PathVariable("id") Long id) {
         return boardService.getBoard(id);
     }
 }

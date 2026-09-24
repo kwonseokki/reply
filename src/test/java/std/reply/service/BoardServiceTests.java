@@ -26,7 +26,7 @@ public class BoardServiceTests {
 
     @Test
     public void testGetBoard() {
-        int id = 2;
+        Long id = 2L;
         BoardDTO board = boardService.getBoard(id);
 
         log.info(board.toString());
